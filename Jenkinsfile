@@ -32,15 +32,15 @@ pipeline {
                 success {
                     // Send success notification email for this stage
                     mail to: "preethrk004@gmail.com",
-                        body: "Stage 'Unit and Integration Tests' succeeded!",
-                        subject: "Unit and Integration Tests Stage Success. Logs Available at: ${env.BUILD_URL}"
+                        body: "Stage 'Unit and Integration Tests' succeeded!.Logs Available at: ${env.BUILD_URL}",
+                        subject: "Unit and Integration Tests Stage Success"
                         
                 }
                 failure {
                     // Send failure notification email for this stage
                     mail to: "preethrk004@gmail.com",
-                        body: "Stage 'Unit and Integration Tests' failed!",
-                        subject: "Unit and Integration Tests Stage Failure. Logs Available at: ${env.BUILD_URL}"
+                        body: "Stage 'Unit and Integration Tests' failed!.Logs Available at: ${env.BUILD_URL}",
+                        subject: "Unit and Integration Tests Stage Failure."
                 }
             }
         }
@@ -77,14 +77,14 @@ pipeline {
                 success {
                     // Send success notification email for this stage
                     mail to: "preethrk004@gmail.com",
-                        body: "Stage 'Security Scan' succeeded!",
-                        subject: "Security Scan Stage Success. Logs Available at: ${env.BUILD_URL}"
+                        body: "Stage 'Security Scan' succeeded!. Logs Available at: ${env.BUILD_URL}",
+                        subject: "Security Scan Stage Success."
                 }
                 failure {
                     // Send failure notification email for this stage
                     mail to: "preethrk004@gmail.com", 
-                        body: "Stage 'Security Scan' failed!",
-                        subject: "Security Scan Stage Failure. Logs Available at: ${env.BUILD_URL}"
+                        body: "Stage 'Security Scan' failed!. Logs Available at: ${env.BUILD_URL}",
+                        subject: "Security Scan Stage Failure."
                 }
             }
         }

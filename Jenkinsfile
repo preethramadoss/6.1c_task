@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the code using Maven
-                echo 'Building the code using Maven...'
+                echo 'Building the code using Maven!!'
             }
             post {
                 success {

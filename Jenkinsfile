@@ -12,13 +12,13 @@ pipeline {
             post {
                 success {
                     // Send success notification email for this stage
-                    emailext to: "preethrk004@gmail.com",
+                    mail to: "preethrk004@gmail.com",
                         body: "Stage 'Build' succeeded!",
                         subject: "Build Stage Success"
                 }
                 failure {
                     // Send failure notification email for this stage
-                    emailext to: "preethrk004@gmail.com",
+                    mail to: "preethrk004@gmail.com",
                         body: "Stage 'Build' failed!",
                         subject: "Build Stage Failure"
                 }
@@ -34,14 +34,14 @@ pipeline {
             post {
                 success {
                     // Send success notification email for this stage
-                    emailext to: "preethrk004@gmail.com",
+                    mail to: "preethrk004@gmail.com",
                         body: "Stage 'Unit and Integration Tests' succeeded!",
                         subject: "Unit and Integration Tests Stage Success",
                         attachLog: true
                 }
                 failure {
                     // Send failure notification email for this stage
-                    emailext to: "preethrk004@gmail.com",
+                    mail to: "preethrk004@gmail.com",
                         body: "Stage 'Unit and Integration Tests' failed!",
                         subject: "Unit and Integration Tests Stage Failure",
                         attachLog: true
@@ -57,13 +57,13 @@ pipeline {
             post {
                 success {
                     // Send success notification email for this stage
-                    emailext to: "preethrk004@gmail.com", 
+                    mail to: "preethrk004@gmail.com", 
                         body: "Stage 'Code Analysis' succeeded!",
                         subject: "Code Analysis Stage Success"
                 }
                 failure {
                     // Send failure notification email for this stage
-                    emailext to: "preethrk004@gmail.com",
+                    mail to: "preethrk004@gmail.com",
                         body: "Stage 'Code Analysis' failed!",
                         subject: "Code Analysis Stage Failure"
                 }
@@ -80,14 +80,14 @@ pipeline {
             post {
                 success {
                     // Send success notification email for this stage
-                    emailext to: "preethrk004@gmail.com",
+                    mail to: "preethrk004@gmail.com",
                         body: "Stage 'Security Scan' succeeded!",
                         subject: "Security Scan Stage Success",
                         attachLog: true
                 }
                 failure {
                     // Send failure notification email for this stage
-                    emailext to: "preethrk004@gmail.com", 
+                    mail to: "preethrk004@gmail.com", 
                         body: "Stage 'Security Scan' failed!",
                         subject: "Security Scan Stage Failure",
                         attachLog: true
@@ -103,13 +103,13 @@ pipeline {
             post {
                 success {
                     // Send success notification email for this stage
-                    emailext to: "preethrk004@gmail.com",
+                    mail to: "preethrk004@gmail.com",
                         body: "Stage 'Deploy to Staging' succeeded!",
                         subject: "Deploy to Staging Stage Success"
                 }
                 failure {
                     // Send failure notification email for this stage
-                    emailext to: "preethrk004@gmail.com", 
+                    mail to: "preethrk004@gmail.com", 
                         body: "Stage 'Deploy to Staging' failed!",
                         subject: "Deploy to Staging Stage Failure"
                 }
@@ -125,13 +125,13 @@ pipeline {
             post {
                 success {
                     // Send success notification email for this stage
-                    emailext to: "preethrk004@gmail.com", 
+                    mail to: "preethrk004@gmail.com", 
                         body: "Stage 'Integration Tests on Staging' succeeded!",
                         subject: "Integration Tests on Staging Stage Success"
                 }
                 failure {
                     // Send failure notification email for this stage
-                    emailext to: "preethrk004@gmail.com", 
+                    mail to: "preethrk004@gmail.com", 
                         body: "Stage 'Integration Tests on Staging' failed!",
                         subject: "Integration Tests on Staging Stage Failure"
                 }
@@ -146,13 +146,13 @@ pipeline {
             post {
                 success {
                     // Send success notification email for this stage
-                    emailext to: "preethrk004@gmail.com", 
+                    mail to: "preethrk004@gmail.com", 
                         body: "Stage 'Deploy to Production' succeeded!",
                         subject: "Deploy to Production Stage Success"
                 }
                 failure {
                     // Send failure notification email for this stage
-                    emailext to: "preethrk004@gmail.com",
+                    mail to: "preethrk004@gmail.com",
                         body: "Stage 'Deploy to Production' failed!",
                         subject: "Deploy to Production Stage Failure"
                 }
@@ -163,7 +163,7 @@ pipeline {
     post {
         success {
             // Send success notification email
-            emailext (
+            mail (
                 to: "preethrk004@gmail.com",
                 body: "Pipeline succeeded!",
                 subject: "Pipeline Success"
@@ -171,7 +171,7 @@ pipeline {
         }
         failure {
             // Send failure notification email
-            emailext to: "preethrk004@gmail.com",  
+            mail to: "preethrk004@gmail.com",  
                 body: "Pipeline failed!",
                 subject: "Pipeline Failure"
         }

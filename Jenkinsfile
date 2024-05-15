@@ -36,15 +36,14 @@ pipeline {
                     // Send success notification email for this stage
                     mail to: "preethrk004@gmail.com",
                         body: "Stage 'Unit and Integration Tests' succeeded!",
-                        subject: "Unit and Integration Tests Stage Success",
-                        attachLog: true
+                        subject: "Unit and Integration Tests Stage Success. Logs Available at: ${env.BUILD_URL}"
+                        
                 }
                 failure {
                     // Send failure notification email for this stage
                     mail to: "preethrk004@gmail.com",
                         body: "Stage 'Unit and Integration Tests' failed!",
-                        subject: "Unit and Integration Tests Stage Failure",
-                        attachLog: true
+                        subject: "Unit and Integration Tests Stage Failure. Logs Available at: ${env.BUILD_URL}"
                 }
             }
         }
@@ -82,15 +81,13 @@ pipeline {
                     // Send success notification email for this stage
                     mail to: "preethrk004@gmail.com",
                         body: "Stage 'Security Scan' succeeded!",
-                        subject: "Security Scan Stage Success",
-                        attachLog: true
+                        subject: "Security Scan Stage Success. Logs Available at: ${env.BUILD_URL}"
                 }
                 failure {
                     // Send failure notification email for this stage
                     mail to: "preethrk004@gmail.com", 
                         body: "Stage 'Security Scan' failed!",
-                        subject: "Security Scan Stage Failure",
-                        attachLog: true
+                        subject: "Security Scan Stage Failure. Logs Available at: ${env.BUILD_URL}"
                 }
             }
         }
